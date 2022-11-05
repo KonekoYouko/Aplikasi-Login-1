@@ -5,21 +5,53 @@
  * Gunakan fungsi showPopUp() untuk menampilkan pop up error
  */
 
-/* Comment : Membuat Variabel untuk setiap elemen view */
+/** @module Login-Script */
+/**
+* Membuat variabel loginFormElement untuk tampilan form.
+* @constant {HTMLElement}
+*/
 const loginFormElement = document.querySelector('#loginForm');
+
+/**
+*Membuat variabel inputEmailElement untuk tamplian input email.
+* @constant {HTMLElement}
+*/
 const inputEmailElement = document.querySelector('#inputEmail');
+
+/**
+ * Membuat variabel inputPasswordElement untuk tampilan input password.
+ * @constant {HTMLElemnt}
 const inputPasswordElement = document.querySelector('#inputPassword');
 
-/* Comment : Membuat Variabel untuk menyimpan email dan password */
+  /**
+   * Membuat variabel expectedEmail untuk menyimpan informasi email sementara.
+   * @Constant {string}
+   */
 const expectedEmail = 'admin@dicoding.com';
+
+
+  /**
+   * Membuat variabel expectedPassword untuk menyimpan informasi email sementara.
+   * @Constant {string}
+   */
 const expectedPassword = 'superpassword';
 
-/* Comment : Menambahkan aksi kli pada button */
+/* Comment : Menambahkan aksi klik pada button */
 loginFormElement.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  /* Comment : Mendapatkan nilai dari masing-masing input (email dan password) ketika tombol ditekan */
+  /**
+   * Membuat variabel email untuk menyimpan nilai email yang didapatkan saat button ditekan.
+   * @constant {string}
+   */
   const email = inputEmailElement.value;
+  
+  
+  
+  /**
+   * Membuat variabel password untuk menyimpan nilai password yang didapatkan saat button ditekan.
+   * @constant {string}
+   */
   const password = inputPasswordElement.value;
   
   /* Comment : Memastikan bahwa nilai email dan nilai password sesuai dengan nilai yang tersimpan */
