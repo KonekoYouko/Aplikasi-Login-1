@@ -24,6 +24,7 @@ const inputEmailElement = document.querySelector('#inputEmail');
 /**
  * Membuat variabel inputPasswordElement untuk tampilan input password.
  * @constant {HTMLElement}
+ */
 const inputPasswordElement = document.querySelector('#inputPassword');
 
 
@@ -62,16 +63,14 @@ loginFormElement.addEventListener('submit', function(event) {
   
   /* Comment : Memastikan bahwa nilai email dan nilai password sesuai dengan nilai yang tersimpan */
   if (email == expectedEmail && password == expectedPassword) {
-  
-    
+   
    /* Comment : Jika sesuai program akan berpindah ke home */ 
-    goToHome();
-    
+    goToHome();  
     
   } else {
     
-    
      /* comment : jika program tidak sesuai maka akan menampilkan informasi bahwa input yang dimasukkan salah */
     showPopUp();
+    
   }
 });
